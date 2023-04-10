@@ -1,0 +1,73 @@
+
+	I'M LOST!! HELP ME, PLEASE
+
+		-- Keyboard --
+	Note: Some of the key sequences may not work as described if the SHIIFT key is depressed or the Caps Lock is on.
+
+F1			-- Toggle "Help Dialog"
+F2			-- Invoke "Playview Dialog"
+F3			-- Invoke "Dataview Dialog"
+F4			-- Toggle "Player Buttons and Progress Bars" OFF/ON
+F5			-- Reorder the Player Buttons and Progrss Bars
+F10			-- Toggle GUI app view between  "FULLSCREEN"  "MAXIMIZED"  "NORMAL"
+SHIFT+F10	-- Invoke the "Popup Menu"
+m            		-- Invoke the "Popup Menu"
+ESC			-- Unconditionally closes and exits this application
+p			-- Toggle MPD play/pause
+s			-- Toggle MPD play/stop
+f			-- Increment track in respect to random, or not random mode
+SHIFT+F 		-- Sequentially Increment track queue (queue + 1) irregardless of the randome (or not random) que option
+CTRL+f 		-- Increment track time by X number of seconds as specifed in config file
+b			-- Decrement track in respect to random, or not random mode
+SHIFT+B		-- Sequentially Decrement track queue position (queue - 1) irregardless of the randome (or not random) que option
+CTRL+b 		-- Decrement track time by XX seconds as specifed in config file
+c				-- Center the current playing track in the trackview
+CTRL+c	-- Toggle Enable or Disable of automatic track centering (LOWER CASE c ONLY)
+CTRL+SHIFT+U			-- Update MPD server database
+z			-- Reset elapsed track time to zero
++			-- Increase MPD Volume
+-			-- Decrease MPD Volume
+0			-- Toggle Mute/Unmute Volume (zero key)
+
+		-- Miscellaneous **NOT-SO-USEFUL** keyboard keys --
+Note: Intended for testing
+CTRL+SHIFT+e 			-- Test the Error message dialog.
+CTRL+SHIFT+n 			-- Test the Notify dialog.
+CTRL+SHIFT+q 			-- Test the Question dialog.
+CTRL+SHIFT+i 			-- Test the Information dialog.
+CTRL+SHIFT+~	-- Will force a sig fault error. Useful only for testing purposes
+CTRL+ALT + SHIFT + L	-- Will ask to extract the internal resource file to CWD directory.
+	Note: This will over-write any previously extracted resource files in the CWD directory with an extenstion of -extracted.
+
+		-- Audio Keys --
+
+Audio player button Play/Pause    		-- Toggle MPD between Play and Pause mode
+Audio player button Forward  			-- Set queue to Next Track
+Audio player button Rewind   			-- Set queue to Previous Track
+
+	Note: The Audio player buttons may not work if the OS has assigned shortcuts to these (and other) keys
+	Pressing the SHIFT or CTRL key while pressing the player button may enable them
+Audio button CTRL + Play/Pause   	-- Toggle Stop/Play MPD Player
+Audio button CTRL + Forward  	-- Move track time forward XX seconds
+Audio button CTRL + Rewind  		-- Move track time backward XX seconds
+
+Audio button Volume UP        		-- Increase MPD Volume
+Audio button Volume DOWN  		-- Decrease MPD Volume
+Audio button MuteVolume     		-- Toggle Mute/Unmute MPD Volume
+	Note: If any of the volume keys do not work, try pressing the SHIFT key while pressing the key
+
+		-- Mouse Actions --
+
+Right click anywhere inside application window to invoke the "Popup Menu"
+Rotate mouse wheel over "Time Progress Bar" to increase/decrease the elasped track time in increments of one second
+Rotate mouse wheel over "Que Progress Bar" to sequentially increase/decrease the track queue position in increments of one track
+Rotate mouse wheel over "Volume Progress Bar" to increase/decrease MPD Volume in increments of 5%
+Left click the "Time Progress Bar" to reset elapsed track time to zero
+Left click "Que Progress Bar" to Center the current playing track in the trackview
+Left click "Volume Progress Bar" to toggle Mute/Unmute Volume
+
+Left click any column header in the Treeview Mode to sort the track listing
+
+Note: Search function CRTL+f is disabled
+
+Note: Most of these key functions are handled in keyboard.c

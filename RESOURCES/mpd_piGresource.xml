@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/resources">
+	<file compressed="true">mpd_piGresource.xml</file>
+	<file compressed="true">How_to_compile_mpd_pi_resources.txt</file>
+	<file compressed="true">mpd_pi.help</file>
+	<file compressed="true">mpd_pi.conf</file>
+	<file compressed="true">mpd_pi.glade</file>
+	<file compressed="true">mpd_pi.css</file>
+	<?file compressed="true">StopIcon-64x64.png</file?>
+	<?file compressed="true">RewindIcon-64x64.png</file?>
+	<?file compressed="true">PreviousIcon-64x64.png</file?>
+	<?file compressed="true">PlayIcon-64x64.png</file?>
+	<?file compressed="true">PauseIcon-64x64.png</file?>
+	<?file compressed="true">NextIcon-64x64.png</file?>
+	<?file compressed="true">ForwardIcon-64x64.png</file?>
+	<?file compressed="true">mpd_pi-titlebar-icon.svg</file?>
+  </gresource>
+</gresources>

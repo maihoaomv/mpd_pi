@@ -1,0 +1,36 @@
+How to build the create rseources as c source code and compile it into the executable.
+
+Change directory to the RESOURCES directory
+
+Create, modify or add to the resource xml file then save it as mpd_piGresource.xml
+
+Execute the following to complile the xml gresource into c source code
+
+glib-compile-resources mpd_piGresource.xml --generate-source  --target=mpd_pi-resource.c
+
+Move or copy mpd_pi-resource.c into the src code directory. this will overwrite the existing file in the src dir if it exist
+
+Compile the resoure code into the mpd_pi exectuable
+
+make clean && make version && make
+
+How to list resource compiled into the exectuable
+
+gresource details mpd_pi
+
+How to extract the compiled in resource(s)
+
+gresource  extract mpd_pi /resources/How_to_compile_mpd_pi_resources.txt  > How_to_compile_mpd_pi_resources.txt-extracted
+gresource  extract mpd_pi /resources/mpd_piGresource.xml  > mpd_piGresource.xml-extracted
+gresource  extract mpd_pi /resources/mpd_pi.help  > mpd_pi.help-extracted
+gresource  extract mpd_pi /resources/mpd_pi.conf  > mpd_pi.conf-extracted
+gresource  extract mpd_pi /resources/mpd_pi.glade	 > mpd_pi.glade-extracted
+gresource  extract mpd_pi /resources/mpd_pi.css	  > mpd_pi.css-extracted
+gresource  extract mpd_pi /resources/ForwardIcon-64x64.png	 > ForwardIcon-64x64.png-extracted
+gresource  extract mpd_pi /resources/NextIcon-64x64.png		     > NextIcon-64x64.png-extracted
+gresource  extract mpd_pi /resources/PauseIcon-64x64.png	     > PauseIcon-64x64.png-extracted
+gresource  extract mpd_pi /resources/PlayIcon-64x64.png	         > PlayIcon-64x64.png-extracted
+gresource  extract mpd_pi /resources/PreviousIcon-64x64.png	 > PreviousIcon-64x64.png-extracted
+gresource  extract mpd_pi /resources/RewindIcon-64x64.png	     > RewindIcon-64x64.png-extracted
+gresource  extract mpd_pi /resources/StopIcon-64x64.png			 > StopIcon-64x64.png-extracted
+gresource  extract mpd_pi /resources/mpd_pi-titlebar-icon.svg  > mpd_pi-titlebar-icon.svg-extracted
