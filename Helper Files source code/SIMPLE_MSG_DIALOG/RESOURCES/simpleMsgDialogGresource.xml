@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/simpleMsgDialog">
+	<file compressed="true">simpleMsgDialog.glade</file>
+	<file compressed="true">simpleMsgDialog.css</file>
+	<file compressed="true">How_to_compile_songview_resources.txt</file>
+	<file compressed="true">simpleMsgDialogGresource.xml</file>
+  </gresource>
+</gresources>
+
+
