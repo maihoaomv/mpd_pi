@@ -5,7 +5,7 @@ GMPC is an MPD client project that, as far as I’m concerned, is the best of al
 
 I decided instead to write my own client that would allow me to easily configure the font size, style, colors and so forth for use on the 7 inch screen.
 
-Mpd_pi is not elegant, or sophisticated, it’s Plain Jane. It allows for an easy to see, easy to use, and hopefully intuitive (mouse/keyboard) interface for a small display that can be configured to your liking. It works really well on my laptop if I want to make a quickly change the track or playlist.
+Mpd_pi is not elegant, or sophisticated, it’s Plain Jane. It allows for an easy to see, easy to use, and hopefully intuitive (mouse/keyboard) interface for a small display that can be configured to your liking. It works really well on my laptop if I want to quickly change the track or playlist.
 
 Mpd_pi is not feature complete, and has programming errors and possible even memory leaks. I am not a professional programmer and I’ve struggled with valgrind trying to get as many of the memory leaks fixed that I could.
 
