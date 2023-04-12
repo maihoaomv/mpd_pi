@@ -1,0 +1,50 @@
+The "dataview" app is intended to be used with "mpd_pi" as a helper for loading folders / tracks from the mpd database,
+
+To compile "database" without updating the version
+make clean && make
+
+To compile "database" with version update
+make clean && make version && make
+
+./dataview -h
+
+ Usage: 	dataview  [ --host ]  [ --port ]  [ --timeout ]  [ --width ]  [ --height ]  [ --font ]  [ --title ]
+ Example: 	dataview --host="localhost" --port=6600 --timeout=30000 --width=1200 --height=800 --font="Bold 20px Sans" --title="Display MPD Database"
+
+
+ This app will display the MPD database files and is intended to be used as a helper, but it can be used standalone.
+ Default is localhost unless specified othewise with the --host= option.
+
+ dataview  [ -h ]  -Print help to command line then exit
+ dataview  [ -v ]  -Print version to command line then exit
+
+ dataview  [ -V ]  -Print verbose useful stats to stdout command line
+
+
+ Press F1 for Help, Press ESC to exit dataview app
+
+ NOTE: Optionally an external config file may be used with dataview. If the config file  dataview.conf  exist in the
+       current working directory, then the app will automatically read configuation from the external configuration file
+       instead of the internal resouce configuration file.
+
+NOTES:
+If a copy of the "dataview.conf" file from the RESOURCE dir is placed in the same current working directory as the app,
+then "dataview" will read it's configuration from this external conf file instead of the internal conf resource file.
+this will allow for setting configuration externally.
+
+To use icons of your choice rather than stock icons or compiled resource icons, then edit these 3 config variables in the external "dataview.conf" file located in the current working directory.
+
+# REQUIRES ABSOLUTE PATH/FILENAME
+# THIS IS THE TOP DIRECTORY
+topDirectoryIconFile=/myPath/to/DATAVIEW/APP/MyTop.png
+#
+# THIS IS THE SUB DIRECTORIES
+subDirectoryIconFile=/myPath/to/DATAVIEW/APP/MySub.png
+#
+# THIS IS THE TRACK ICONS
+trackIconFile=/myPath/to/DATAVIEW/APP/MyTrk.png
+
+Leave these 3 variables blank i.e.  subDirectoryIconFile=  to use built in icons
+
+
+App has 3 POPUP menus. Right click on app for popup menu or press CTRL+m

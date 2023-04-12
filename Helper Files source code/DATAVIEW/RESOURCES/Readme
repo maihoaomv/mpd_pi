@@ -1,0 +1,47 @@
+By default the icons are not compiled into the executable as a resource.
+
+How to compile icons, TrackIcon.png,  FolderIcon.png,  SubFolderIcon.png  into the "dataview" app as a resource
+at the command line:
+cd RESOURCES
+
+edit the dataviewGresource.xml file and remove the ? from these 3 lines
+
+    <?file>TrackIcon.png</file?>
+	<?file>FolderIcon.png</file?>
+	<?file>SubFolderIcon.png</file?>
+
+copy 3 icons of your choice into the RESOURCES folder named as (or linked as), TrackIcon.png,   FolderIcon.png,	SubFolderIcon.png,
+then compile dataview-resource.c in this directory.
+
+at the command line:
+glib-compile-resources dataviewGresource.xml --generate-source  --target=dataview-resource.c
+
+move the newly compiled resurce file dataview-resource.c to the "dataview.c" source directory
+compile dataview as follows
+
+at the command line:
+mv dataview-resource.c ../
+cd ..
+
+at the command line:
+make clean && make version && make
+
+
+NOTES:
+If a copy of the "dataview.conf" file from the RESOURCE dir is placed in the same current working directory as the app,
+then "dataview" will read it's configuration from this external conf file instead of the internal conf resource file.
+this will allow for setting configuration externally.
+
+To use icons of your choice rather than stock icons or compiled resource icons, then edit these 3 config variables in the external "dataview.conf" file located in the current working directory.
+
+# REQUIRES ABSOLUTE PATH/FILENAME
+# THIS IS THE TOP DIRECTORY
+topDirectoryIconFile=/myPath/to/DATAVIEW/APP/MyTop.png
+#
+# THIS IS THE SUB DIRECTORIES
+subDirectoryIconFile=/myPath/to/DATAVIEW/APP/MySub.png
+#
+# THIS IS THE TRACK ICONS
+trackIconFile=/myPath/to/DATAVIEW/APP/MyTrk.png
+
+Leave these 3 variables blank i.e.  subDirectoryIconFile=  to use built in icons

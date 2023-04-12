@@ -1,0 +1,43 @@
+HOW TO COMPILE DATAVIEW RESOURCES INTO THE EXECUTABLE
+
+This is example xml  of the RESOURCE XML  dataviewGresource.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/dataview">
+    <file>TrackIcon.png</file>
+	<file>FolderIcon.png</file>
+	<file compressed="true">dataview.conf</file>
+	<file compressed="true">dataview.glade</file>
+	<file compressed="true">dataview.css</file>
+	<file compressed="true">dataview.help</file>
+  </gresource>
+</gresources>
+
+How to build the rseource code as c source code.
+Change directory to the RESOURCES directory
+Create, modify or add to the resource xml file then save it as dataviewGresource.xml
+Execute the following to complile the xml gresource into c source code
+
+glib-compile-resources dataviewGresource.xml --generate-source  --target=dataview-resource.c
+
+Move or copy dataview-resource.c into the src code directory. this will overwrite the existing file in the src dir if it exist
+Compile the resoure code into the dataview exectuable
+
+make clean && make version && make
+
+How to list resource compiled into the exectuable
+
+gresource details dataview
+
+The compiled in resource(s) may be extracted from the dataview executable as follows:
+
+gresource  extract dataview /dataview/dataview.help > dataview.help-extracted
+gresource  extract dataview /dataview/dataview.glade > dataview.glade-extracted
+gresource  extract dataview /dataview/dataview.css > dataview.css-extracted
+gresource  extract dataview /dataview/dataview.conf > dataview.conf-extracted
+gresource  extract dataview /dataview/FolderIcon.png > FolderIcon.png-extracted
+gresource  extract dataview /dataview/TrackIcon.png > TrackIcon.png-extracted
+gresource  extract dataview /dataview/How to compile data resources.txt >How to compile data resources.txt-extracted
+
+That is pretty much it

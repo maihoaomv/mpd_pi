@@ -1,0 +1,78 @@
+/* WINDOW CONFIGURATION */
+/* THESE SET THE MPD PLAYER STATUS COLORS*/
+/* RED IS STOPPED, GREEN IS PLAY, BLUE IS PAUSE, GRAY IS EMPTY PLAY QUEUE */
+window.background#CSS_window_main-STOP { background-color: firebrick1; }
+
+/* MPD STATE IS PLAY */
+window.background#CSS_window_main-PLAY { background-color: limegreen; }
+
+/* MPD STATE IS IS PAUSE */
+window.background#CSS_window_main-PAUSE { background-color: deepskyblue; }
+
+/* NO TRACKS IN QUEUE */
+window.background#CSS_window_main-NOTRACKS { background-color: lightgray; }
+
+/* TEXT COLOR */
+window {color: black; }
+
+label#CSS_lblHelp           { background-color: blue; color: white; font-weight: bold; }
+label#CSS_lblHostname 	{ background-color: transparent; font-weight: bold; font-size: larger; color: black;  }
+
+paned > separator {  min-width: 5px; min-height: 5px; }
+
+treeview:selected	{ background-color: #C1FFC1; color: black; }
+
+treeview header button { background-color: lightgray;  font-size: larger; }
+treeview
+{ background-image: none;
+	background-color: #F7F7F7;
+	color: black;
+	box-shadow: none;
+	}
+
+treeview#CSS_selectTrackBG  header button {   color: rgba(48, 48, 48, 0.55);  }
+treeview#CSS_dataBaseBG  header button {  color: rgba(48, 48, 48, 0.55);   }
+treeview#CSS_selectTrackBG   {   color: rgba(48, 48, 48, 0.55); -gtk-icon-effect: dim }
+treeview#CSS_dataBaseBG   {  color: rgba(48, 48, 48, 0.55);  -gtk-icon-effect: dim }
+
+/* DON'T USE scrolledwindow HERE TO PREVENT WHITE DOT NEAR BOTTON OF SEPERATOR */
+#CSS_selTrkViewScroll, #CSS_scrollHelp, #CSS_dataviewScroll
+{
+	background-color: transparent;
+	background-color: #F7F7F7;
+	border: 6px solid black;
+	border-radius: 12px;
+	}
+
+#CSS_box_InfoLabels {padding: 5px; }
+#CSS_box_0 {padding: 5px; }
+
+/* ALL POPUP MENUS */
+menu separator { background-color: black; }
+menu { color: black; /*font:  16px "";*/ border: 3px solid black;  background-color: transparent; }
+
+/* THESE SET TITLE (ACTUALLYA LABEL) FOR THE POPUP MENU  */
+#CSS_titleMi, #CSS_databaseTitleMi, #CSS_selTrksTitleMi {  background-color: lightgrey;  font-weight: bold; font-size: larger; border-bottom: 3px solid black; border-left: 3px solid black; border-right: 3px solid black; }
+
+/* BUTTON CONFIGURATION */
+/* NEEDS BACKGROUND IMAGE SET SO BUTTON BG WILL WORK */
+button
+{
+	background-color: transparent;
+/*	background-image: none;*/
+/*	color: black;*/
+/*	border: 1px solid black;*/
+	}
+
+/* BUTTON BORDER HOVER COLOR -ALL BUTTONS */
+button:hover { border-color: white; }
+
+/* NOTIFY DIALOG BACKGROUND COLOR */
+#CSS_notifyDialog { background-color: limegreen;}
+
+/* TOOLTIP*/
+tooltip { font:  40px Sans; color: black; background-color: lightblue; }
+tooltip { border: 3px solid black; 	border-radius: 12px;}
+
+/* Note: This parameter can be over-ridden from the conf file or the command line*/
+window {font: Bold 20px Sans;}

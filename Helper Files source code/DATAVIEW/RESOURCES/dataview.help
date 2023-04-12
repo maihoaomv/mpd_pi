@@ -1,0 +1,103 @@
+************ Command line options ************
+
+This app accepts the following command line options
+--host="localhost"
+--port=6600
+--timeout=30000
+--width=1200
+--height=800
+--font="Bold 20px Sans"
+--title="Display MPD Database"
+
+-h		Displays help and exits
+-v		Displays version and exits
+
+-V		Displays verbose stats to command line via stdout
+
+************ Keyboard Shortcut Keys ************
+
+Open / Close (Toggle) Help Dialog
+	H, F1
+
+Exit / Quit Application
+	Escape, ALT+F4, CTRL+Q   Note: Escape unconditionally closes app
+
+Toggle GUI Window Between Maximize, and Normal
+	F10
+
+If the focus is Database pane, will add the selected directory to Select Tracks pane
+	A
+
+If focus is Database pane, will add the selected Directory to Player Que
+	CTRL+A
+
+If focus is Select Tracks pane, will add the selected row(s) / track(s) to Player Que
+	CTRL+A
+
+Collaspe Selected Row(s)
+	C
+
+Collaspe All Rows
+	CTRL+C
+
+Expand Selected Row(s) if either pane is in focus
+	E
+
+Expand All Rows	if either pane is in focus
+	CTRL+E
+
+Invoke Main Popup Menu
+	M, SHIFT+F10
+
+Invoke Popup Menu for focused Database or Select Tracks treeview
+	CTRL+M
+
+Toggle Play / Pause MPD player
+	P
+
+Toggle Play / Stop MPD player
+	CTRL+P
+
+Clear Player Que
+	CTRL+SHIFT+Q
+
+CTRL+x -- Remove Selected Tracks
+
+CTRL+ALT+x -- Remove All Rows From Select Tracks
+	Note: Works only when the Select Tracks is in focus
+
+
+Replace current player queue with selected row and immediately start player
+	Return, Space
+Note: Does not work with multiple selected rows
+
+Tab -- Switch Between Database Treeview and Select Tracks Treeview
+
+CTRL + Left Arrow --  Move Pane Window Left
+CTRL + Right Arrow --  Move Pane Window Right
+
+Scroll treeview left
+	Left Arrow
+
+Scroll treeview right
+	Right Arrow
+
+Move Cursor Up
+	Up Arrow
+
+Move Cursor Down
+	Down Arrow
+
+**************** Mouse Actions *****************
+
+Right clicking the mouse in the database pane will involke the Database Popup Menu
+
+Right clicking the mouse in the select track pane will involke the Select Tracks Popup Menu
+
+Right clicking the mouse on the GUI above the treeviews will invoke the Main Popup Menu
+
+Double clicking any single row in the Database pane or Select Tracks pane will replace the
+tracks in the MPD queue and start the MPD player
+
+
+

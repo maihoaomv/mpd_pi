@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.40.0 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkTreeStore" id="dataviewTreeStore">
+    <columns>
+      <!-- column-name Directory -->
+      <column type="gchararray"/>
+      <!-- column-name Path -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkTreeStore" id="selTrkTreeStore">
+    <columns>
+      <!-- column-name Type -->
+      <column type="GdkPixbuf"/>
+      <!-- column-name Folder -->
+      <column type="gchararray"/>
+      <!-- column-name Track -->
+      <column type="gchararray"/>
+      <!-- column-name Disc -->
+      <column type="gchararray"/>
+      <!-- column-name Title -->
+      <column type="gchararray"/>
+      <!-- column-name Artist -->
+      <column type="gchararray"/>
+      <!-- column-name Album -->
+      <column type="gchararray"/>
+      <!-- column-name Path -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkWindow" id="window_main">
+    <property name="name">CSS_window_main</property>
+    <property name="width-request">640</property>
+    <property name="height-request">480</property>
+    <property name="can-focus">False</property>
+    <property name="events">GDK_BUTTON_PRESS_MASK | GDK_KEY_PRESS_MASK</property>
+    <property name="hexpand">True</property>
+    <property name="vexpand">True</property>
+    <property name="title" translatable="yes">Dataview</property>
+    <property name="window-position">center</property>
+    <property name="default-width">1200</property>
+    <property name="default-height">600</property>
+    <property name="icon-name">audio-x-generic</property>
+    <property name="gravity">center</property>
+    <signal name="destroy" handler="gtk_main_quit" swapped="no"/>
+    <child>
+      <object class="GtkBox" id="box_0">
+        <property name="name">CSS_box_0</property>
+        <property name="can-focus">False</property>
+        <property name="valign">baseline</property>
+        <property name="margin-top">3</property>
+        <property name="margin-bottom">5</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkBox" id="box_InfoLabels">
+            <property name="name">CSS_box_InfoLabels</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="halign">center</property>
+            <property name="spacing">15</property>
+            <child>
+              <object class="GtkLabel" id="lblHostname">
+                <property name="name">CSS_lblHostname</property>
+                <property name="visible">True</property>
+                <property name="sensitive">False</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Host Name</property>
+                <property name="use-markup">True</property>
+                <property name="justify">center</property>
+                <property name="wrap">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrollHelp">
+            <property name="name">CSS_scrollHelp</property>
+            <property name="can-focus">True</property>
+            <property name="propagate-natural-width">True</property>
+            <property name="propagate-natural-height">True</property>
+            <child>
+              <object class="GtkViewport">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkLabel" id="lblHelp">
+                    <property name="name">CSS_lblHelp</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">This is the contents of help label</property>
+                    <property name="use-markup">True</property>
+                    <property name="wrap">True</property>
+                    <property name="selectable">True</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkPaned" id="dataview_Pane">
+            <property name="name">CSS_dataview_Pane</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="position">600</property>
+            <property name="position-set">True</property>
+            <property name="wide-handle">True</property>
+            <child>
+              <object class="GtkScrolledWindow" id="dataviewScroll">
+                <property name="name">CSS_dataviewScroll</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="propagate-natural-width">True</property>
+                <property name="propagate-natural-height">True</property>
+                <child>
+                  <object class="GtkTreeView" id="dataviewTreeView">
+                    <property name="name">CSS_dataviewTreeView</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="events">GDK_BUTTON_PRESS_MASK | GDK_KEY_PRESS_MASK</property>
+                    <property name="model">dataviewTreeStore</property>
+                    <property name="expander-column">dirCol</property>
+                    <property name="enable-search">False</property>
+                    <property name="search-column">0</property>
+                    <property name="level-indentation">15</property>
+                    <property name="enable-grid-lines">both</property>
+                    <property name="enable-tree-lines">True</property>
+                    <child internal-child="selection">
+                      <object class="GtkTreeSelection"/>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="dirCol">
+                        <property name="resizable">True</property>
+                        <property name="min-width">25</property>
+                        <property name="title" translatable="yes">Database Directory</property>
+                        <property name="clickable">True</property>
+                        <property name="alignment">0.10000000149011612</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="dirCellRenderer"/>
+                          <attributes>
+                            <attribute name="text">0</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="pathCol">
+                        <property name="resizable">True</property>
+                        <property name="min-width">25</property>
+                        <property name="title" translatable="yes">Path</property>
+                        <property name="clickable">True</property>
+                        <property name="alignment">0.10000000149011612</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="pathCellRenderer"/>
+                          <attributes>
+                            <attribute name="text">1</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="resize">True</property>
+                <property name="shrink">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow" id="selTrkViewScroll">
+                <property name="name">CSS_selTrkViewScroll</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="shadow-type">in</property>
+                <child>
+                  <object class="GtkTreeView" id="selTrkTreeView">
+                    <property name="name">CSS_selTrkTreeView</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="events">GDK_BUTTON_PRESS_MASK | GDK_KEY_PRESS_MASK</property>
+                    <property name="model">selTrkTreeStore</property>
+                    <property name="expander-column">selTrkViewPixBufCol</property>
+                    <property name="enable-search">False</property>
+                    <property name="search-column">3</property>
+                    <property name="level-indentation">15</property>
+                    <property name="rubber-banding">True</property>
+                    <property name="enable-grid-lines">both</property>
+                    <property name="enable-tree-lines">True</property>
+                    <child internal-child="selection">
+                      <object class="GtkTreeSelection">
+                        <property name="mode">multiple</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="selTrkViewPixBufCol">
+                        <property name="min-width">10</property>
+                        <property name="title" translatable="yes">Sel Trk</property>
+                        <child>
+                          <object class="GtkCellRendererPixbuf" id="selTrkViewPixBufRender"/>
+                          <attributes>
+                            <attribute name="pixbuf">0</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="selTrkViewFolderCol">
+                        <property name="resizable">True</property>
+                        <property name="min-width">10</property>
+                        <property name="title" translatable="yes">Folder</property>
+                        <property name="clickable">True</property>
+                        <property name="alignment">0.5</property>
+                        <property name="reorderable">True</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="selTrkViewFolderTxtRender">
+                            <property name="width-chars">30</property>
+                          </object>
+                          <attributes>
+                            <attribute name="text">1</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="selTrkViewTrackCol">
+                        <property name="resizable">True</property>
+                        <property name="min-width">10</property>
+                        <property name="title" translatable="yes">Track</property>
+                        <property name="clickable">True</property>
+                        <property name="alignment">0.5</property>
+                        <property name="reorderable">True</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="selTrkViewTrackTxtRender"/>
+                          <attributes>
+                            <attribute name="text">2</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="selTrkViewDiscCol">
+                        <property name="resizable">True</property>
+                        <property name="min-width">10</property>
+                        <property name="title" translatable="yes">Disc</property>
+                        <property name="clickable">True</property>
+                        <property name="alignment">0.5</property>
+                        <property name="reorderable">True</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="selTrkViewDiscTxtRender"/>
+                          <attributes>
+                            <attribute name="text">3</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="selTrkViewTitleCol">
+                        <property name="resizable">True</property>
+                        <property name="min-width">10</property>
+                        <property name="title" translatable="yes">Title</property>
+                        <property name="clickable">True</property>
+                        <property name="alignment">0.5</property>
+                        <property name="reorderable">True</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="selTrkViewTitleTxtRender">
+                            <property name="width-chars">30</property>
+                          </object>
+                          <attributes>
+                            <attribute name="text">4</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="selTrkViewArtistCol">
+                        <property name="resizable">True</property>
+                        <property name="min-width">10</property>
+                        <property name="title" translatable="yes">Artist</property>
+                        <property name="clickable">True</property>
+                        <property name="alignment">0.5</property>
+                        <property name="reorderable">True</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="selTrkViewArtistTxtRender">
+                            <property name="width-chars">30</property>
+                          </object>
+                          <attributes>
+                            <attribute name="text">5</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="selTrkViewAlbumCol">
+                        <property name="resizable">True</property>
+                        <property name="min-width">10</property>
+                        <property name="title" translatable="yes">Album</property>
+                        <property name="clickable">True</property>
+                        <property name="alignment">0.5</property>
+                        <property name="reorderable">True</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="selTrkViewAlbumTxtRender">
+                            <property name="width-chars">30</property>
+                          </object>
+                          <attributes>
+                            <attribute name="text">6</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="selTrkViewPathTxtCol">
+                        <property name="resizable">True</property>
+                        <property name="min-width">10</property>
+                        <property name="title" translatable="yes">Path</property>
+                        <property name="clickable">True</property>
+                        <property name="reorderable">True</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="selTrkViewPathTxtRender"/>
+                          <attributes>
+                            <attribute name="text">7</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="resize">True</property>
+                <property name="shrink">True</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

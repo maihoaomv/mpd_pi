@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/dataview">
+    <?file>TrackIcon.png</file?>
+	<?file>FolderIcon.png</file?>
+	<?file>SubFolderIcon.png</file?>
+	<file compressed="true">dataview.conf</file>
+	<file compressed="true">dataview.glade</file>
+	<file compressed="true">dataview.css</file>
+	<file compressed="true">dataview.help</file>
+	<file compressed="true">How to compile data resources.txt</file>
+	<file compressed="true">dataviewGresource.xml</file>
+  </gresource>
+</gresources>
