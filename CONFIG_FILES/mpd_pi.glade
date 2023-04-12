@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.40.0 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkListStore" id="trackviewListStore">
+    <columns>
+      <!-- column-name Queue -->
+      <column type="guint"/>
+      <!-- column-name Disc -->
+      <column type="gchararray"/>
+      <!-- column-name Track -->
+      <column type="gchararray"/>
+      <!-- column-name Time -->
+      <column type="gchararray"/>
+      <!-- column-name Title -->
+      <column type="gchararray"/>
+      <!-- column-name Artist -->
+      <column type="gchararray"/>
+      <!-- column-name Album -->
+      <column type="gchararray"/>
+      <!-- column-name Filename -->
+      <column type="gchararray"/>
+      <!-- column-name SetFont -->
+      <column type="gchararray"/>
+      <!-- column-name RowColor -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkTreeModelSort" id="trackViewModelSort">
+    <property name="model">trackviewListStore</property>
+  </object>
+  <object class="GtkWindow" id="window_main">
+    <property name="name">CSS_window_main</property>
+    <property name="width-request">640</property>
+    <property name="height-request">-1</property>
+    <property name="can-focus">True</property>
+    <property name="halign">baseline</property>
+    <property name="valign">baseline</property>
+    <property name="window-position">center-always</property>
+    <property name="gravity">south</property>
+    <signal name="destroy" handler="gtk_main_quit" swapped="no"/>
+    <child>
+      <object class="GtkBox" id="box_0">
+        <property name="name">CSS_box_0</property>
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkBox" id="boxSongview">
+            <property name="name">CSS_boxSongview</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkScrolledWindow" id="scrollSongview">
+                <property name="name">CSS_scrollSongview</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="shadow-type">in</property>
+                <child>
+                  <object class="GtkViewport" id="viewportForSongview">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkBox" id="box_for_SongviewLabel">
+                        <property name="name">CSS_box_for_SongviewLabel</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <child type="center">
+                          <object class="GtkBox" id="songviewCenterChild">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkLabel" id="lblSongTitle">
+                                <property name="name">CSS_lblSongTitle</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <property name="label" translatable="yes">SONG TITLE</property>
+                                <property name="use-markup">True</property>
+                                <property name="justify">center</property>
+                                <property name="wrap">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">False</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="lblSongArtist">
+                                <property name="name">CSS_lblSongArtist</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <property name="label" translatable="yes">SONG ARTIST</property>
+                                <property name="use-markup">True</property>
+                                <property name="justify">center</property>
+                                <property name="wrap">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">False</property>
+                                <property name="position">2</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="lblSongAlbumArtist">
+                                <property name="name">CSS_lblSongAlbumArtist</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <property name="label" translatable="yes">ALBUM/ARTIST</property>
+                                <property name="use-markup">True</property>
+                                <property name="justify">center</property>
+                                <property name="wrap">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">False</property>
+                                <property name="position">3</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="lblSongAlbum">
+                                <property name="name">CSS_lblSongAlbum</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <property name="label" translatable="yes">SONG ALBUM</property>
+                                <property name="use-markup">True</property>
+                                <property name="justify">center</property>
+                                <property name="wrap">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">False</property>
+                                <property name="position">4</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="lblSongDiskTrack">
+                                <property name="name">CSS_lblSongDiskTrack</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <property name="label" translatable="yes">DISK/TRACK</property>
+                                <property name="use-markup">True</property>
+                                <property name="justify">center</property>
+                                <property name="wrap">True</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">False</property>
+                                <property name="position">5</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">7</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="lblSongName">
+                            <property name="name">CSS_lblSongName</property>
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="label" translatable="yes">SONG NAME</property>
+                            <property name="use-markup">True</property>
+                            <property name="justify">center</property>
+                            <property name="wrap">True</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="lblSongURI">
+                            <property name="name">CSS_lblSongURI</property>
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="label" translatable="yes">SONG URI</property>
+                            <property name="use-markup">True</property>
+                            <property name="justify">center</property>
+                            <property name="wrap">True</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="pack-type">end</property>
+                            <property name="position">6</property>
+                          </packing>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="boxTrackview">
+            <property name="name">CSS_boxTrackview</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkScrolledWindow" id="tv_scrollwin_trackview">
+                <property name="name">CSS_tv_scrollwin_trackview</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <child>
+                  <object class="GtkTreeView" id="trackviewTreeView">
+                    <property name="name">CSS_trackviewTreeView</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="vexpand">True</property>
+                    <property name="model">trackViewModelSort</property>
+                    <property name="enable-search">False</property>
+                    <property name="search-column">0</property>
+                    <property name="enable-grid-lines">both</property>
+                    <property name="enable-tree-lines">True</property>
+                    <child internal-child="selection">
+                      <object class="GtkTreeSelection"/>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="trackviewcolumnQueue">
+                        <property name="resizable">True</property>
+                        <property name="spacing">10</property>
+                        <property name="min-width">20</property>
+                        <property name="title" translatable="yes">Queue</property>
+                        <property name="clickable">True</property>
+                        <property name="alignment">0.5</property>
+                        <property name="reorderable">True</property>
+                        <property name="sort-indicator">True</property>
+                        <property name="sort-column-id">0</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="cellrenderertextQueue">
+                            <property name="xpad">10</property>
+                          </object>
+                          <attributes>
+                            <attribute name="font">8</attribute>
+                            <attribute name="foreground">9</attribute>
+                            <attribute name="text">0</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="trackviewcolumnDisc">
+                        <property name="resizable">True</property>
+                        <property name="spacing">10</property>
+                        <property name="min-width">20</property>
+                        <property name="title" translatable="yes">Disc</property>
+                        <property name="clickable">True</property>
+                        <property name="alignment">0.5</property>
+                        <property name="reorderable">True</property>
+                        <property name="sort-indicator">True</property>
+                        <property name="sort-column-id">1</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="cellrenderertextDisc">
+                            <property name="xpad">10</property>
+                          </object>
+                          <attributes>
+                            <attribute name="font">8</attribute>
+                            <attribute name="foreground">9</attribute>
+                            <attribute name="text">1</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="trrackviewcolumnTrack">
+                        <property name="resizable">True</property>
+                        <property name="spacing">10</property>
+                        <property name="min-width">20</property>
+                        <property name="title" translatable="yes">Track</property>
+                        <property name="clickable">True</property>
+                        <property name="alignment">0.5</property>
+                        <property name="reorderable">True</property>
+                        <property name="sort-indicator">True</property>
+                        <property name="sort-column-id">2</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="cellrenderertextTrack">
+                            <property name="xpad">10</property>
+                          </object>
+                          <attributes>
+                            <attribute name="font">8</attribute>
+                            <attribute name="foreground">9</attribute>
+                            <attribute name="text">2</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="trackviewcolumnTime">
+                        <property name="resizable">True</property>
+                        <property name="spacing">10</property>
+                        <property name="min-width">20</property>
+                        <property name="title" translatable="yes">Time</property>
+                        <property name="clickable">True</property>
+                        <property name="alignment">0.5</property>
+                        <property name="reorderable">True</property>
+                        <property name="sort-indicator">True</property>
+                        <property name="sort-column-id">3</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="cellrenderertextTime">
+                            <property name="xpad">10</property>
+                          </object>
+                          <attributes>
+                            <attribute name="font">8</attribute>
+                            <attribute name="foreground">9</attribute>
+                            <attribute name="text">3</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="trackviewcolumnTitle">
+                        <property name="resizable">True</property>
+                        <property name="spacing">10</property>
+                        <property name="fixed-width">400</property>
+                        <property name="min-width">20</property>
+                        <property name="title" translatable="yes">Title</property>
+                        <property name="clickable">True</property>
+                        <property name="alignment">0.5</property>
+                        <property name="reorderable">True</property>
+                        <property name="sort-indicator">True</property>
+                        <property name="sort-column-id">4</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="cellrenderertextTitle">
+                            <property name="xpad">10</property>
+                          </object>
+                          <attributes>
+                            <attribute name="font">8</attribute>
+                            <attribute name="foreground">9</attribute>
+                            <attribute name="text">4</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="trackviewcolumnArtist">
+                        <property name="resizable">True</property>
+                        <property name="spacing">10</property>
+                        <property name="fixed-width">400</property>
+                        <property name="min-width">20</property>
+                        <property name="title" translatable="yes">Artist</property>
+                        <property name="clickable">True</property>
+                        <property name="alignment">0.5</property>
+                        <property name="reorderable">True</property>
+                        <property name="sort-indicator">True</property>
+                        <property name="sort-column-id">5</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="cellrenderertextArtist">
+                            <property name="xpad">10</property>
+                          </object>
+                          <attributes>
+                            <attribute name="font">8</attribute>
+                            <attribute name="foreground">9</attribute>
+                            <attribute name="text">5</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="trackviewcolumnAlbum">
+                        <property name="resizable">True</property>
+                        <property name="spacing">10</property>
+                        <property name="fixed-width">400</property>
+                        <property name="min-width">20</property>
+                        <property name="title" translatable="yes">Album</property>
+                        <property name="clickable">True</property>
+                        <property name="alignment">0.5</property>
+                        <property name="reorderable">True</property>
+                        <property name="sort-indicator">True</property>
+                        <property name="sort-column-id">6</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="cellrenderertextAlbum">
+                            <property name="xpad">10</property>
+                          </object>
+                          <attributes>
+                            <attribute name="font">8</attribute>
+                            <attribute name="foreground">9</attribute>
+                            <attribute name="text">6</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn" id="trackviewcolumnFilename">
+                        <property name="resizable">True</property>
+                        <property name="spacing">10</property>
+                        <property name="title" translatable="yes">Path/Filename</property>
+                        <property name="clickable">True</property>
+                        <property name="alignment">0.05000000074505806</property>
+                        <property name="reorderable">True</property>
+                        <property name="sort-indicator">True</property>
+                        <property name="sort-column-id">7</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="cellrenderertextFilename">
+                            <property name="xpad">10</property>
+                            <property name="editable">True</property>
+                          </object>
+                          <attributes>
+                            <attribute name="font">8</attribute>
+                            <attribute name="foreground">9</attribute>
+                            <attribute name="text">7</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="boxFlipHorzVertBP">
+            <property name="name">CSS_boxFlipHorzVertBP</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkBox" id="boxButtons">
+                <property name="name">CSS_boxPlayerButtons</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkBox" id="btnBoxPlayerControls">
+                    <property name="name">CSS_btnBoxPlayerControls</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="halign">center</property>
+                    <property name="valign">center</property>
+                    <property name="homogeneous">True</property>
+                    <child>
+                      <object class="GtkButton" id="btnPrevious">
+                        <property name="name">CSS_rewind_btn</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">False</property>
+                        <property name="tooltip-text" translatable="yes">Previous</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="image-position">top</property>
+                        <property name="always-show-image">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="btnRewind">
+                        <property name="name">CSS_back_btn</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">False</property>
+                        <property name="tooltip-text" translatable="yes">Rewind</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="image-position">top</property>
+                        <property name="always-show-image">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="btnPause">
+                        <property name="name">CSS_pause_btn</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">False</property>
+                        <property name="tooltip-text" translatable="yes">Pause</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="image-position">top</property>
+                        <property name="always-show-image">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="btnPlay">
+                        <property name="name">CSS_play_btn</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">False</property>
+                        <property name="tooltip-text" translatable="yes">Play</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="image-position">top</property>
+                        <property name="always-show-image">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="btnStop">
+                        <property name="name">CSS_stop_btn</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">False</property>
+                        <property name="tooltip-text" translatable="yes">Stop</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="image-position">top</property>
+                        <property name="always-show-image">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="btnForward">
+                        <property name="name">CSS_skip_btn</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">False</property>
+                        <property name="tooltip-text" translatable="yes">Forward</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="image-position">top</property>
+                        <property name="always-show-image">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">6</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="btnNext">
+                        <property name="name">CSS_next_btn</property>
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">False</property>
+                        <property name="tooltip-text" translatable="yes">Next</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="image-position">top</property>
+                        <property name="always-show-image">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">7</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkBox" id="boxProgressBars">
+                <property name="name">CSS_boxProgressBars</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+                <property name="spacing">10</property>
+                <property name="homogeneous">True</property>
+                <child>
+                  <object class="GtkEventBox" id="eventBoxProgressBarTime">
+                    <property name="name">CSS_eventBoxProgressBarTime</property>
+                    <property name="width-request">0</property>
+                    <property name="height-request">0</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="halign">center</property>
+                    <property name="valign">center</property>
+                    <property name="visible-window">False</property>
+                    <child>
+                      <object class="GtkProgressBar" id="progressBarTime">
+                        <property name="name">CSS_progressBarTime</property>
+                        <property name="visible">True</property>
+                        <property name="app-paintable">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Rotate mouse wheel to move track time +/- 1 second.
+Left click to reset track time to zero</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="pulse-step">0</property>
+                        <property name="text" translatable="yes">Track Time</property>
+                        <property name="show-text">True</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEventBox" id="eventBoxProgressBarQueue">
+                    <property name="name">CSS_eventBoxProgressBarQueue</property>
+                    <property name="width-request">0</property>
+                    <property name="height-request">0</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="halign">center</property>
+                    <property name="valign">center</property>
+                    <property name="visible-window">False</property>
+                    <child>
+                      <object class="GtkProgressBar" id="progressBarQueue">
+                        <property name="name">CSS_progressBarQueue</property>
+                        <property name="visible">True</property>
+                        <property name="app-paintable">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Rotate mouse wheel to Increment/Decrement queue +/- 1 track</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="pulse-step">0</property>
+                        <property name="text" translatable="yes">Track Queue</property>
+                        <property name="show-text">True</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEventBox" id="eventBoxProgressBarVolume">
+                    <property name="name">CSS_eventBoxProgressBarVolume</property>
+                    <property name="width-request">0</property>
+                    <property name="height-request">0</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="halign">center</property>
+                    <property name="valign">center</property>
+                    <property name="visible-window">False</property>
+                    <child>
+                      <object class="GtkProgressBar" id="progressBarVolume">
+                        <property name="name">CSS_progressBarVolume</property>
+                        <property name="visible">True</property>
+                        <property name="app-paintable">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="tooltip-text" translatable="yes">Rotate mouse wheel to change volume +/ 5 percent.
+Left click to mute volume</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="pulse-step">0</property>
+                        <property name="text" translatable="yes">Volume</property>
+                        <property name="show-text">True</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkSizeGroup" id="sizeProgressBars">
+    <widgets>
+      <widget name="progressBarTime"/>
+      <widget name="progressBarQueue"/>
+      <widget name="progressBarVolume"/>
+    </widgets>
+  </object>
+</interface>
