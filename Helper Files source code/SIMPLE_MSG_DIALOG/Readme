@@ -1,5 +1,5 @@
 The "simpleMsgDialog" app is designed to be used with "mpd_pi" as a helper for displaying errors, notifications and help.
-My goal for this app was to create a simple easy to use message dialog that can be spawned by mpd_pi that can (to some extent) interact with mpd_pi
+My goal for this app was to create a simple easy to use message dialog that can be spawned by mpd_pi and can (to some extent) interact with mpd_pi
 or be used as a standalone app.
 
 To compile "simpleMsgDialog"
