@@ -1,0 +1,26 @@
+HOW TO COMPILE playview RESOURCES INTO THE EXECUTABLE
+
+How to build the rseource code as c source code.
+Change directory to the RESOURCES directory
+Create, modify or add to the resource xml file then save it as playviewGresource.xml
+Execute the following to compile the xml gresource into c source code
+
+glib-compile-resources playviewGresource.xml --generate-source  --target=playview-resource.c
+
+Move or copy playview-resource.c into the src code directory. this will overwrite the existing file in the src dir if it exist
+Compile the resoure code into the playview exectuable
+
+make clean && make version && make
+
+How to list resource compiled into the exectuable
+
+gresource details playview
+
+The compiled in resource(s) may be extracted from the playview executable as follows:
+
+gresource  extract playview /playview/playviewGresource.xml > playviewGresource.xml
+gresource  extract playview /playview/playview.help > playview.help-extracted
+gresource  extract playview /playview/playview.glade > playview.glade-extracted
+gresource  extract playview /playview/playview.css > playview.css-extracted
+gresource  extract playview /playview/playview.conf > playview.conf-extracted
+gresource  extract playview /playview/How_to_compile_data_resources.txt >How_to_compile_data_resources.txt-extracted

@@ -1,0 +1,61 @@
+/* WINDOW CONFIGURATION */
+/* THESE SET THE MPD PLAYER STATUS COLORS*/
+/* RED IS STOPPED, GREEN IS PLAY, BLUE IS PAUSE, GRAY IS EMPTY PLAY QUEUE */
+window.background#CSS_window_main-STOP { background-color: firebrick1; }
+
+/* MPD STATE IS PLAY */
+window.background#CSS_window_main-PLAY { background-color: limegreen; }
+
+/* MPD STATE IS IS PAUSE */
+window.background#CSS_window_main-PAUSE { background-color: deepskyblue; }
+
+/* NO TRACKS IN QUEUE */
+window.background#CSS_window_main-NOTRACKS{ background-color: lightgray; }
+
+label#CSS_lblHostname 	{ background-color: transparent; font-weight: bold; font-size: larger; color: black;  }
+label#CSS_lblHelp           	{ background-color: blue; color: white; font-weight: bold; }
+
+#CSS_playviewTreeView:selected	{background-image: none; background-color: #C1FFC1; }
+
+#CSS_playviewTreeView
+{ background-image: none;
+	background-color: #F7F7F7;
+	color: black;
+/*	font: 16px "";*/
+	box-shadow: none;
+	}
+
+#CSS_tv_scrollwin_playview, #CSS_scrollHelp
+{  background-color: #F7F7F7;
+	border: 6px solid black;
+	border-radius: 12px;
+	}
+
+/*#CSS_playviewTreeView  header button { background-color: #7FFFD4; }*/
+#CSS_playviewTreeView  header button { background-color: #F7F7F7; }
+
+#CSS_box_InfoLabels {padding: 5px; }
+#CSS_box_0 {padding: 5px; }
+
+/* ALL POPUP MENUS */
+menu separator { background-color: black; }
+menu { color: black; /*font:  16px "";*/ border: 3px solid black;  background-color: lightgrey; }
+
+/* THESE SET TITLE (ACTUALLY A LABEL) FOR THE POPUP MENU  */
+#CSS_playlistTitleMi {  background-color: lightgrey;  font-weight: bold; font-size: larger; border-bottom: 3px solid black; border-left: 3px solid black; border-right: 3px solid black; }
+
+/* BUTTON CONFIGURATION */
+/* PLAYER BUTTONS */
+/* BUTTON CONFIGURATION */
+/* NEEDS BACKGROUND IMAGE SET SO BUTTON BG WILL WORK */
+button
+{	background-color: transparent; }
+
+/* BUTTON BORDER HOVER COLOR -ALL BUTTONS */
+button:hover { border-color: #F7F7F7; }
+
+/* TOOLTIP */
+tooltip { /*font:  25px Sans;*/ color: black; background-color: lightblue;  border: 3px solid black; 	border-radius: 12px;}
+
+/* Note: This parameter can be over-ridden from the conf file or the command line*/
+window {font: Bold 20px Sans;}

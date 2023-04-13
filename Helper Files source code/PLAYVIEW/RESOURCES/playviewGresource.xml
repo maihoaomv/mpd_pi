@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/playview">
+	<file compressed="true">playview.conf</file>
+	<file compressed="true">playview.css</file>
+	<file compressed="true">playview.glade</file>
+	<file compressed="true">playview.help</file>
+	<file compressed="true">How_to_compile_playview_resources.txt</file>
+	<file compressed="true">playviewGresource.xml</file>
+  </gresource>
+</gresources>

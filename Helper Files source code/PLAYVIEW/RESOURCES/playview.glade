@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkListStore" id="playviewListStore">
+    <columns>
+      <!-- column-name Playlist -->
+      <column type="gchararray"/>
+    </columns>
+  </object>
+  <object class="GtkWindow" id="window_main">
+    <property name="name">CSS_window_main</property>
+    <property name="can-focus">True</property>
+    <property name="hexpand">True</property>
+    <property name="vexpand">True</property>
+    <property name="title" translatable="yes">Playview</property>
+    <property name="window-position">center</property>
+    <property name="icon-name">audio-x-generic</property>
+    <property name="gravity">center</property>
+    <signal name="destroy" handler="gtk_main_quit" swapped="no"/>
+    <child>
+      <object class="GtkBox" id="box_0">
+        <property name="name">CSS_box_0</property>
+        <property name="can-focus">False</property>
+        <property name="valign">baseline</property>
+        <property name="margin-top">3</property>
+        <property name="margin-bottom">5</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkBox" id="box_InfoLabels">
+            <property name="name">CSS_box_InfoLabels</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <child>
+              <object class="GtkLabel" id="lblHostname">
+                <property name="name">CSS_lblHostname</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="tooltip-text" translatable="yes">Hostname</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+                <property name="label" translatable="yes">Host Name</property>
+                <property name="justify">center</property>
+                <property name="wrap">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="tv_scrollwin_playview">
+            <property name="name">CSS_tv_scrollwin_playview</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="propagate-natural-width">True</property>
+            <property name="propagate-natural-height">True</property>
+            <child>
+              <object class="GtkTreeView" id="playviewTreeView">
+                <property name="name">CSS_playviewTreeView</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="model">playviewListStore</property>
+                <property name="enable-search">False</property>
+                <property name="search-column">0</property>
+                <property name="enable-grid-lines">both</property>
+                <property name="enable-tree-lines">True</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection"/>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="playviewcolumnPlaylist">
+                    <property name="resizable">True</property>
+                    <property name="title" translatable="yes">Double Click Playlist to Load and Start</property>
+                    <property name="clickable">True</property>
+                    <property name="reorderable">True</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="cellrenderertextPlaylist"/>
+                      <attributes>
+                        <attribute name="text">0</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrollHelp">
+            <property name="name">CSS_scrollHelp</property>
+            <property name="can-focus">True</property>
+            <property name="propagate-natural-width">True</property>
+            <property name="propagate-natural-height">True</property>
+            <child>
+              <object class="GtkViewport">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkLabel" id="lblHelp">
+                    <property name="name">CSS_lblHelp</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">This is the contents of help label</property>
+                    <property name="use-markup">True</property>
+                    <property name="wrap">True</property>
+                    <property name="selectable">True</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

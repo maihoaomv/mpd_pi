@@ -1,0 +1,41 @@
+Playview accepts the following command line options
+--host="localhost"
+--port=6600
+--timeout=30000
+--width=1200
+--height=800
+--font="Bold 20px Sans"
+--title="Display MPD Playlist"
+
+-h		Displays help and exits
+-v		Displays version and exits
+
+-V		Displays verbose stats to stdout command line. May use multiple -V
+
+** Keyboard Shortcut Keys **
+
+KEY Escape:, CTRL+q: -- Exit Application
+
+KEY h:, F1: -- Toggle Help Menu
+
+KEY m:, SHIFT+F10: -- Invoke application Popup Menu
+
+KEY F10: -- Toggle Application Window Between Maximize / Normal
+
+KEY CTRL+SHIFT+q: -- Clear MPD player Que
+
+KEY CTRL+a: -- Add selected playlist to MPD Que
+
+KEY CTRL+r:, Return:, Space: -- Clear MPD Que, replace Que with selected playlist, and start MPD player
+
+KEY p: -- Toggle Play / Pause MPD player
+
+KEY s: -- Toggle Stop / Play MPD player
+
+KEY CTRL+ARROW key: -- Scroll help up/down/left/right
+
+                ** Mouse Shortcut Buttons **
+
+MOUSE -- Right click inside application to invoke popoup menu
+
+MOUSE -- Double click playlist to clear MPD Que, replace Que with clicked playlist, and start MPD player
