@@ -1,0 +1,30 @@
+The "simpleMsgDialog" app is designed to be used with "mpd_pi" as a helper for displaying errors, notifications and help.
+My goal for this app was to create a simple easy to use message dialog that can be spawned by mpd_pi that can (to some extent) interact with mpd_pi
+or be used as a standalone app.
+
+To compile "simpleMsgDialog"
+make clean && make
+
+simpleMsgDialog -h
+
+
+  simpleMsgDialog is inteded as a helper to display error, noitfy, question, or information dialogs.
+  simpleMsgDialog requires at minimum a message string enclosed in quotes and one dialog option on the command line.
+
+  Usage:  simpleMsgDialog "message string" [ option ] .... [ dialog option ]
+
+  simpleMsgDialog accepts the following options:
+     -h ,  --help							Print help to stdout and exit.
+     -v ,  --version							Print version to stdout and exit.
+     -V ,  --Verbose							Print verbose debug status to stdout.
+     -m  "message string" ,   --msg="message string"			Enclose Message string in quotes.
+     -T  "dialog title string" ,  --title="dialog title string"		Enclose Title string in quotes.
+     -f  "Bold 16px Sans" ,  --font="Bold italic 16px Sans"		Enclose Font string in quotes.
+     -p parentPid ,  --pid=parentPid					Parent process ID (integer => 0).
+     -t seconds ,  --timeout=seconds					Timeout to auto exit this app  (integer => 0).
+
+  These are the dialog options
+     -e ,  --error							Display error messag dialog.
+     -n ,  --notify							Display notify message dialog.
+     -q ,  --question					Display question message dialog.
+     -i ,   --info 							Display help/status/other message dialog.
