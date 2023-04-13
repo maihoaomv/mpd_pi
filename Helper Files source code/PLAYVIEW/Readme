@@ -1,0 +1,32 @@
+The "playview" app is intended to be used with "mpd_pi" as a helper for loading playlist from the mpd database,
+
+To compile "playview" without updating the version
+make clean && make
+
+To compile "playview" with version update
+make clean && make version && make
+
+./playview -h
+
+ Usage: 	playview  [ --host ]  [ --port ]  [ --timeout ]  [ --width ]  [ --height ]  [ --font ]  [ --title ]
+ Example: 	playview --host="localhost" --port=6600 --timeout=30000 --width=1200 --height=800 --font="Bold 20px Sans" --title="Display MPD Playlist"
+
+
+ This app will display the MPD playlist files and is intended to be used as a helper, but it can be used standalone.
+ Default is localhost unless specified othewise with the --host= option.
+
+ playview  [ -h ]  -Print help to command line then exit
+ playview  [ -v ]  -Print version to command line then exit
+
+ playview  [ -V ]  -Print verbose useful stats to stdout command line
+
+ Press F1 for Help, Press ESC to exit playview app
+
+ NOTE: Optionally an external config file may be used with playview. If the config file  "playview.conf"  exist in the
+ current working directory, then the app will automatically read configuation from the external configuration file 
+ instead of the internal resouce configuration file.
+
+NOTES:
+If a copy of the "playview.conf" file from the RESOURCE dir is placed in the same current working directory as the app, then "playview" will read it's configuration from this external conf file instead of the internal conf resource file. this will allow for setting configuration externally.
+
+App has a single POPUP menu. Right click on app for popup menu or press CTRL+m
