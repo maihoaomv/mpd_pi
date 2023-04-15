@@ -12,6 +12,17 @@ Open a terminal in the mpd_pi-main folder
 At the command line:
 make clean && make Version && make
 
+Should create exectuable file mpd_pi
 
-
+You may also need to install and configure the Music Player Daemon server
 mpd
+mpc
+
+If you modify code and/or configure mpd_pi you may need to install
+glade
+devhelp
+
+Code text editor such as scite, vim, gedit or any text editor should work.
+I generally don't use an IDE.
+
+mpd_pi does not have an install option. If you set up the directory structure as I have here, mpd_pi should work from any directory on your hard drive. Then link it to an applet in the panel.
