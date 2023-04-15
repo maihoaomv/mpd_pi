@@ -1,0 +1,17 @@
+Download the tar ball and extract the contents into a sub-folder leaving the tree structue as is
+
+This should work on Debain, Ubuntu, Linux Mint and other debain derivatives. 
+It may also build on Fedora and ArchLinux and others.
+But it will NOT compile on Windows.
+
+To compile this app you may need to install
+libgtk-3-dev
+libmpdclient-dev
+
+Open a terminal in the mpd_pi-main folder
+At the command line:
+make clean && make Version && make
+
+
+
+mpd
