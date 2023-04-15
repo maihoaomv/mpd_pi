@@ -12,7 +12,7 @@ Open a terminal in the mpd_pi-main folder
 At the command line:
 make clean && make version && make
 
-Should create exectuable file mpd_pi
+This should create the exectuable file mpd_pi
 
 You may also need to install and configure the Music Player Daemon server
 mpd
