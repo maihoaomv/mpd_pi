@@ -22,7 +22,7 @@ If you modify code and/or configure mpd_pi you may need to install
 glade
 devhelp
 
-Code text editor such as scite, vim, gedit or any text editor should work.
+Any code text editor such as scite, vim, gedit or any text editor should work.
 I generally don't use an IDE.
 
 mpd_pi does not have an install option. If you set up the directory structure as I have here, mpd_pi should work from any directory on your hard drive. Then link it to an applet in the panel.
