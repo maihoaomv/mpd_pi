@@ -28,6 +28,6 @@ I generally don't use an IDE.
 mpd_pi does not have an install option. If you set up the directory structure as I have here, mpd_pi should work 
 from any directory on your hard drive. Then link it to an applet in the panel.
 
-You will also need to comply dataview, playview and simple_message_dialog in the 
+You will also need to compile dataview, playview and simpleMsgDialog in the 
 Helper Files source code" sub-directory then copy the executable files to the "HELPER_FILES" sub-directory.
 
