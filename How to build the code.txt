@@ -10,7 +10,7 @@ libmpdclient-dev
 
 Open a terminal in the mpd_pi-main folder
 At the command line:
-make clean && make Version && make
+make clean && make version && make
 
 Should create exectuable file mpd_pi
 
