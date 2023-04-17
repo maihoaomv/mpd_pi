@@ -21,13 +21,14 @@ To run mpd_pi from command line
 
 The default mpd server hostname is "localhost"
 thus ./mpd_pi will query the localhost mpd server.
-If server is running, the the GUI startup and display the current mpd track queue
+If server is running, the GUI will start and display the current mpd track queue
 with the current playing track centered in the GUI.
 Otherwise if mpd_pi can not get a connection to the localhost mpd server, a popup error dialog will be displayed.
 
 
 For help from the command line, type
 mpd_pi -h
+
 Application Options:
   -c, --cfg-file=/home/user/mpd_pi.conf     Absolute path/filename of config file.
   -H, --hostname=rpi3.local                 MPD server hostname or IP address.
