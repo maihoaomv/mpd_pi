@@ -1,6 +1,6 @@
 Download the tar ball and extract the contents into a sub-folder leaving the tree structue as is
 
-This should work on Debain, Ubuntu, Linux Mint, Raspberrypi OS and other debain derivatives. 
+This should build on Debain, Ubuntu, Linux Mint, Raspberrypi OS and other debain derivatives. 
 It may also build on Fedora and ArchLinux and others.
 But it will NOT compile on Windows.
 
