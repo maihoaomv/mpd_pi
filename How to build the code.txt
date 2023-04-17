@@ -17,17 +17,45 @@ This should create the exectuable file mpd_pi
 You will also need to compile dataview, playview and simpleMsgDialog in the 
 "Helper Files source code" sub-directory then copy the executable files to the "HELPER_FILES" sub-directory.
 
+To run mpd_pi from command line 
 
-You may also need to install and configure the Music Player Daemon server
+The default mpd server hostname is "localhost"
+thus ./mpd_pi will query the localhost mpd server.
+If server is running, the the GUI startup and display the current mpd track queue
+with the current playing track centered in the GUI.
+Otherwise if mpd_pi can not get a connection to the localhost mpd server, a popup error dialog will be displayed.
+
+
+For help from the command line, type
+mpd_pi -h
+Application Options:
+  -c, --cfg-file=/home/user/mpd_pi.conf     Absolute path/filename of config file.
+  -H, --hostname=rpi3.local                 MPD server hostname or IP address.
+  -P, --port=6600                           MPD server port number.
+  -T, --timeout=30000                       MPD server connection timeout.
+
+Note:  Default hostname (as default setting in the config file) is localhost, port 0, timeout 0
+
+Debug Options:
+  mpd_pi [ -v ]  -Print version to command line then exit
+  mpd_pi [ -V ]  -Print verbose stats to stdout command line.
+  Multiple -V or -V=x  Verbose range 1 through 9. 10 or greater, show all.
+    Level 1 - Conf Files,  Level 2 - Key Variables,  Level 3 - Set configuration,  Level 4 - Songview Variables.
+
+  mpd_pi [ -R ]  -List Resources
+  Resources may be extracted from mpd_pi as shown in the following example:
+    gresource  extract mpd_pi /resources/RESOURCE_NAME  > RESOURCE_NAME-extracted
+
+
+
+If you don't already have an MPD Server on your network, you will need to install and configure the Music Player Daemon server
 mpd
 mpc
 
-If you want to modify code and/or configure mpd_pi you may need to install
+If you want to modify the code and/or configure mpd_pi you may need to install
 glade
 devhelp
-
-Any code text editor such as scite, vim, gedit or any text editor should work.
-I generally don't use an IDE.
+A code text editor such as scite, vim, gedit or any text editor should work.
 
 mpd_pi does not have an install option. If you set up the directory structure as I have here, mpd_pi should work 
 from any directory on your hard drive. Then link mpd_pi executable to an applet in the panel.
