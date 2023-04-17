@@ -17,13 +17,13 @@ This should create the exectuable file mpd_pi
 You will also need to compile dataview, playview and simpleMsgDialog in the 
 "Helper Files source code" sub-directory then copy the executable files to the "HELPER_FILES" sub-directory.
 
-To run mpd_pi from command line 
+Running mpd_pi from the command line: 
 
 The default mpd server hostname is "localhost"
-thus ./mpd_pi will query the localhost mpd server.
+thus ./mpd_pi sith no options will query the localhost mpd server.
 If server is running, the GUI will start and display the current mpd track queue
 with the current playing track centered in the GUI.
-Otherwise if mpd_pi can not get a connection to the localhost mpd server, a popup error dialog will be displayed.
+Otherwise if mpd_pi fails to get a connection to the localhost mpd server, a popup error dialog will be displayed.
 
 
 For help from the command line, type
