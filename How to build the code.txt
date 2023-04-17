@@ -14,6 +14,10 @@ make clean && make version && make
 
 This should create the exectuable file mpd_pi
 
+You will also need to compile dataview, playview and simpleMsgDialog in the 
+"Helper Files source code" sub-directory then copy the executable files to the "HELPER_FILES" sub-directory.
+
+
 You may also need to install and configure the Music Player Daemon server
 mpd
 mpc
@@ -28,6 +32,5 @@ I generally don't use an IDE.
 mpd_pi does not have an install option. If you set up the directory structure as I have here, mpd_pi should work 
 from any directory on your hard drive. Then link mpd_pi to an applet in the panel.
 
-You will also need to compile dataview, playview and simpleMsgDialog in the 
-Helper Files source code" sub-directory then copy the executable files to the "HELPER_FILES" sub-directory.
+
 
