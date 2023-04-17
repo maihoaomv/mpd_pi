@@ -1,7 +1,7 @@
 Put helper file source code here.
 
-DATAVIEW - select folder and/or tracks from mpd database
+DATAVIEW -  external helper folder and/or tracks from mpd database Server
 
-PLAYVIEW - select a playlist
+PLAYVIEW -  external helper select a playlist
 
-SIMPLE_MSG_DIALOG - external help for displaying errors, notifications and help
+SIMPLE_MSG_DIALOG - external helper for displaying errors, notifications and help
