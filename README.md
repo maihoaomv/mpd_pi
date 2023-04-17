@@ -13,4 +13,4 @@ Mpd_pi is not feature complete, and has programming errors and possible even mem
 
 Beware it has errors!
 
-Note:	Configuration will require some knowledge of GLADE - user interface designer for GTK+ and GNOME and knowledge of CSS styling and layout for GTK+.
+Note:	Configuration may require some knowledge of GLADE - user interface designer for GTK+ and GNOME and knowledge of CSS styling and layout for GTK+.
